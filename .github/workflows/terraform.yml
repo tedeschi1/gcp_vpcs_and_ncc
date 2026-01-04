@@ -22,6 +22,7 @@ permissions:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    environment: dev
     env:
       GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
       GCP_REGION: us-south1  # Change to your preferred region
