@@ -29,7 +29,7 @@ jobs:
       
     defaults:
       run:
-        working-directory: ./gcp-vnets.tf
+        working-directory: ./gcp-vnets
         
     steps:
     - name: Checkout
