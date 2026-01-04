@@ -61,4 +61,4 @@ jobs:
           terraform apply -auto-approve
         fi
       env:
-        TF_VARS_vpc_east_namet: ${{ vars.vpc_east_name }}
+        TF_VARS_vpc_east_namet: ${{ vars.VPC_EAST_NAME }}
