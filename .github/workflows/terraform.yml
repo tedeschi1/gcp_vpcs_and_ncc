@@ -50,7 +50,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan -input=false
+      run: terraform plan -input=false -lockfile=false
       env: 
         TF_VAR_vpc_east_name: ${{ vars.VPC_EAST_NAME }}
 
