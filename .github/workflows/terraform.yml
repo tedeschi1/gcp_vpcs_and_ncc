@@ -26,6 +26,7 @@ jobs:
       GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
       GCP_REGION: us-south1  # Change to your preferred region
       TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET }}
+      TF_VAR_vpc_east_name: ${{ vars.VPC_EAST_NAME }}
       
     defaults:
       run:
@@ -51,8 +52,6 @@ jobs:
 
     - name: Terraform Plan
       run: terraform plan -input=false
-      env: 
-        TF_VAR_vpc_east_name: ${{ vars.VPC_EAST_NAME }}
 
     - name: Terraform Action
       # Logic to choose between Apply and Destroy
@@ -63,4 +62,4 @@ jobs:
           terraform apply -auto-approve
         fi
       env:
-        TF_VAR_vpc_east_namet: ${{ vars.VPC_EAST_NAME }}
+        TF_VAR_vpc_east_name: ${{ vars.VPC_EAST_NAME }}
