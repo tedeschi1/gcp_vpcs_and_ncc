@@ -60,3 +60,5 @@ jobs:
         else
           terraform apply -auto-approve
         fi
+      env:
+        TF_VARS_tf_state_bucket: ${{ vars.TF_STATE_BUCKET }}
