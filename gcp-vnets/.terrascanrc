@@ -1,8 +1,0 @@
-[scan-rules]
-skip-rules = ["AC_GCP_0001", "AC_GCP_0002"]
-
-[severity]
-level = "high"
-
-[notifications.webhook]
-url = "https://webhook.site/45df0e8a-6b40-4378-9fdc-05a2f2822c91"

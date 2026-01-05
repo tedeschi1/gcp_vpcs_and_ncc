@@ -45,15 +45,8 @@ jobs:
         only_warn: false # Set to false to block deployment if violations are found
         sarif_upload: true
         iac_dir: ./gcp-vnets
-        config_path: ${{ github.workspace }}/.terrascanrc
 
-    - name: Upload SARIF to GitHub
-      uses: github/codeql-action/upload-sarif@v3
-      if: always() # Upload results even if the scan failed
-      with:
-        sarif_file: terrascan.sarif
-
-    # Authenticate to GCP using Workload Identity Federation
+     # Authenticate to GCP using Workload Identity Federation
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@v2'
