@@ -1,5 +1,5 @@
 resource "google_network_connectivity_hub" "us_hub" {
-  name        = "global-vpc-hub"
+  name        = "us-vpc-hub"
   description = "NCC Hub to connect regional US VPCs"
   project     = var.gcp_project_id
 }
