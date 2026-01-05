@@ -1,5 +1,5 @@
-resource "google_compute_instance" "centralus" {
-  name         = "centralus-compute-instance"
+resource "google_compute_instance" "south1-us" {
+  name         = "south1-compute-instance1"
   machine_type = "n2-standard-2"
   zone         = "us-south1-a"
 
