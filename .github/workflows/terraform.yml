@@ -41,7 +41,6 @@ jobs:
       uses: tenable/terrascan-action@main
       with:
         iac_type: 'terraform'
-        iac_version: 'v1'
         policy_type: 'gcp'
         only_warn: true # This will fail the build if violations are found
         sarif_upload: true
