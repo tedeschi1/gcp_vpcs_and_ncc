@@ -62,5 +62,3 @@ jobs:
         else
           terraform apply -auto-approve
         fi
-      env:
-        TF_VAR_vpc_east_name: ${{ vars.VPC_EAST_NAME }}
