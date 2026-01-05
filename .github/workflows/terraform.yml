@@ -42,9 +42,8 @@ jobs:
       with:
         iac_type: 'terraform'
         policy_type: 'gcp'
-        only_warn: true # This will fail the build if violations are found
+        only_warn: false # Set to false to block deployment if violations are found
         sarif_upload: true
-        # Ensure it scans the same directory your TF is in
         iac_dir: ./gcp-vnets    
 
     # Authenticate to GCP using Workload Identity Federation
