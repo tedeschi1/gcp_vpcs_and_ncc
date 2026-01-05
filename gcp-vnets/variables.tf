@@ -8,10 +8,10 @@ variable "gcp_region" {
   default = "us-central1"
 }
 
-variable "gcp_credentials_file" {
-  type = string
-  default = "C:/Users/Michael Tedeschi/Downloads/csp-gcp-mtedeschi-b944a061f93c.json"
-}
+# variable "gcp_credentials_file" {
+#   type = string
+#   default = "C:/Users/Michael Tedeschi/Downloads/csp-gcp-mtedeschi-b944a061f93c.json"
+# }
 
 variable "vpc_east_name" {
   type        = string
