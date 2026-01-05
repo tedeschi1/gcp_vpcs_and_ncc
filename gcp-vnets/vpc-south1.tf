@@ -14,7 +14,7 @@ resource "google_compute_subnetwork" "vpc1_south1_sn1" {
 
   log_config {
   aggregation_interval = "INTERVAL_5_SEC"
-  flow_sampling = .5
+  flow_sampling = 0.5
   metadata = "INCLUDE_ALL_METADATA"
   }
 
@@ -29,7 +29,7 @@ resource "google_compute_subnetwork" "vpc1_south1_sn2" {
 
   log_config {
   aggregation_interval = "INTERVAL_5_SEC"
-  flow_sampling = .5
+  flow_sampling = 0.5
   metadata = "INCLUDE_ALL_METADATA"
   }
 
