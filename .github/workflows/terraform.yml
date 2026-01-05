@@ -44,7 +44,8 @@ jobs:
         policy_type: 'gcp'
         only_warn: false # Set to false to block deployment if violations are found
         sarif_upload: true
-        iac_dir: ./gcp-vnets    
+        iac_dir: ./gcp-vnets
+        config_path: ./.terrascanrc   
 
     # Authenticate to GCP using Workload Identity Federation
     - id: 'auth'
