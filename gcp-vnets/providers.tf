@@ -12,3 +12,10 @@ provider "google" {
   project = var.gcp_project_id
   region  = var.gcp_region
 }
+
+#GCP Provider Configuration
+provider "google" {
+  alias   = "us-south1"
+  project = var.gcp_project_id
+  region  = var.gcp_region
+}

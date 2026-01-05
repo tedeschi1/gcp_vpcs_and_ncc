@@ -1,6 +1,8 @@
 resource "google_compute_network" "vpc1_south1" {
   name = var.vpc1_south1_name
   auto_create_subnetworks = false
+
+  provider = google.us-south1
 }
 
 resource "google_compute_subnetwork" "vpc1_south1_sn1" {
@@ -8,6 +10,8 @@ resource "google_compute_subnetwork" "vpc1_south1_sn1" {
   ip_cidr_range = "10.64.0.0/24"
   network = google_compute_network.vpc1_south1.id
   region = "us-south1"
+
+  provider = google.us-south1
 }
 
 resource "google_compute_subnetwork" "vpc1_south1_sn2" {
@@ -15,4 +19,6 @@ resource "google_compute_subnetwork" "vpc1_south1_sn2" {
   ip_cidr_range = "10.64.1.0/24"
   network = google_compute_network.vpc1_south1.id
   region = "us-south1"
+
+  provider = google.us-south1
 }
