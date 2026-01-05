@@ -36,7 +36,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    # Authenticate to GCP using Workload Identity Federation
+    - name: Run Terrascan
+      id: terrascan
+      uses: tenable/terrascan-action@main
+      with:
+        iac_type: 'terraform'
+        policy_type: 'gcp'
+        only_warn: false # Set to false to block deployment if violations are found
+        sarif_upload: true
+        iac_dir: ./gcp-vnets
+
+     # Authenticate to GCP using Workload Identity Federation
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@v2'
