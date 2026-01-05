@@ -27,7 +27,8 @@ jobs:
       GCP_REGION: us-south1  # Change to your preferred region
       TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET }}
       TF_VAR_vpc_east_name: ${{ vars.VPC_EAST_NAME }}
-      TF_VAR_gcp_project_id: ${{ vars.gcp_project_id}}
+      TF_VAR_gcp_project_id: ${{ vars.gcp_project_id }}
+      TF_VAR_vpc_south_name: ${{ vars.vpc_south_name }}
       
     defaults:
       run:
