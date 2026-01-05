@@ -7,7 +7,7 @@ resource "google_compute_firewall" "vpc1_east1_rules" {
   priority    = 1000
 
   #Allow in-browser SSH
-  source_ranges = ["35.235.240.0/20", "10.0.0.0/21"]
+  source_ranges = ["35.235.240.0/20", "10.64.0.0/21"]
 
   allow {
     protocol  = "tcp"
