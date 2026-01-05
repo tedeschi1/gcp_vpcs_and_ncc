@@ -1,6 +1,7 @@
 resource "google_compute_network" "vpc1_east1" {
   name = var.vpc_east_name
   auto_create_subnetworks = false
+  routing_mode = "GLOBAL"
 }
 
 resource "google_compute_subnetwork" "vpc1_subnet1" {
