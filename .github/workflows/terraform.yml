@@ -36,6 +36,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Run Terrascan
+      id: terrascan
+      uses: tenable/terrascan-action@main
+      with:
+        iac_type: 'terraform'
+        iac_version: 'v1'
+        policy_type: 'gcp'
+        only_warn: true # This will fail the build if violations are found
+        sarif_upload: true
+        # Ensure it scans the same directory your TF is in
+        iac_dir: ./gcp-vnets    
+
     # Authenticate to GCP using Workload Identity Federation
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
