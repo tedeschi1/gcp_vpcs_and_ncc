@@ -12,6 +12,12 @@ resource "google_compute_subnetwork" "vpc1_south1_sn1" {
   network = google_compute_network.vpc1_south1.id
   region = "us-south1"
 
+  log_config {
+  aggregation_interval = "INTERVAL_5_SEC"
+  flow_sampling = 0.5
+  metadata = "INCLUDE_ALL_METADATA"
+  }
+
   provider = google.us-south1
 }
 
@@ -20,6 +26,12 @@ resource "google_compute_subnetwork" "vpc1_south1_sn2" {
   ip_cidr_range = "10.64.1.0/24"
   network = google_compute_network.vpc1_south1.id
   region = "us-south1"
+
+  log_config {
+  aggregation_interval = "INTERVAL_5_SEC"
+  flow_sampling = 0.5
+  metadata = "INCLUDE_ALL_METADATA"
+  }
 
   provider = google.us-south1
 }
