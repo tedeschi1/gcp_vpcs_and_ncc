@@ -17,5 +17,5 @@ provider "google" {
 provider "google" {
   alias   = "us-south1"
   project = var.gcp_project_id
-  region  = var.gcp_region
+  region  = "us-south1"
 }
