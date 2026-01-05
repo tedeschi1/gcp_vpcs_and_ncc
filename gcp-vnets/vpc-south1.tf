@@ -1,6 +1,7 @@
 resource "google_compute_network" "vpc1_south1" {
   name = "vpc1-south1"
   auto_create_subnetworks = false
+  routing_mode = "GLOBAL"
 
   provider = google.us-south1
 }
