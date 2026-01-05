@@ -12,8 +12,3 @@ variable "vpc_east_name" {
   type        = string
   description = "The name of the VPC in the east region"
 }
-
-variable "vpc1_south1_name" {
-  type        = string
-  description = "The name of the VPC in the south region"
-}
