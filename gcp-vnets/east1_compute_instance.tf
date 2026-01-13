@@ -1,7 +1,8 @@
 resource "google_compute_instance" "east1-us" {
-  name         = "east1-compute-instance1"
+  name         = "east1-compute-instance-${count.index + 1}"
   machine_type = "n2-standard-2"
   zone         = "us-east1-b"
+  count        = 3
 
   tags = ["east1", "allow-ssh"]
 

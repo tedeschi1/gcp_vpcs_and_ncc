@@ -12,3 +12,8 @@ variable "vpc_east_name" {
   type        = string
   description = "The name of the VPC in the east region"
 }
+
+variable "instance_names" {
+  type    = list(string)
+  default = ["web-server", "app-server", "db-server"]
+}
