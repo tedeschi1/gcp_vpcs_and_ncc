@@ -31,3 +31,8 @@ resource "google_compute_instance" "east1-us" {
 
   depends_on = [ google_compute_subnetwork.vpc1_subnet1 ]
 }
+
+output "east1_instance_ips" {
+  description = "Public IP addresses of the US East1 compute instances"
+  value       = google_compute_instance.east1-us[*].network_interface[0].access_config[0].nat_ip
+}
