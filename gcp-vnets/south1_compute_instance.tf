@@ -1,7 +1,8 @@
 resource "google_compute_instance" "south1-us" {
-  name         = "south1-compute-instance1"
+  name         = var.instance_names[count.index]
   machine_type = "n2-standard-2"
   zone         = "us-south1-a"
+  count        = length(var.instance_names)
 
   tags = ["southus", "allow-ssh"]
 
