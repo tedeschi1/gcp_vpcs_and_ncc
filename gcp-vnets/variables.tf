@@ -17,3 +17,10 @@ variable "instance_names" {
   type    = list(string)
   default = ["web-server", "app-server", "db-server"]
 }
+
+variable "server_config" {
+  default = {
+    "web-prod" = { type = "n2-standard-2", zone = "us-south1-b" }
+    "db-prod"  = { type = "n2-standard-2", zone = "us-south1-c" }
+  }
+}
