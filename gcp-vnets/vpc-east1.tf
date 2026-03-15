@@ -23,9 +23,9 @@ resource "google_compute_subnetwork" "vpc1_subnet2" {
   network = google_compute_network.vpc1_east1.id
   region = "us-east1"
 
-    log_config {
+  log_config {
     aggregation_interval = "INTERVAL_5_SEC"
-    flow_sampling = 0.5
-    metadata = "INCLUDE_ALL_METADATA"
+    flow_sampling        = 0.5
+    metadata             = "INCLUDE_ALL_METADATA"
   }
 }

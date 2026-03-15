@@ -35,6 +35,6 @@ resource "google_compute_instance" "south1-us-sn2" {
 output "south1_instance_ips" {
   description = "A map of instance names to their public IP addresses"
   value = {
-    for p in google_compute_instance.east1-us : p.name => p.network_interface[0].access_config[0].nat_ip
+    for p in google_compute_instance.south1-us-sn2 : p.name => p.network_interface[0].access_config[0].nat_ip
   }
 }
