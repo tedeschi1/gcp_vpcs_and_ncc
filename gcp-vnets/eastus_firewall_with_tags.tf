@@ -1,13 +1,13 @@
 resource "google_compute_firewall" "vpc1_east1_rules" {
   project     = var.gcp_project_id
   name        = "us-east1-firewall-rules"
-  network     = "vpc1-east1"
+  network     = google_compute_network.vpc1_east1.name
   description = "Creates firewall rule targeting tagged instances"
   direction   = "INGRESS"
   priority    = 1000
 
   #Allow in-browser SSH
-  source_ranges = ["35.235.240.0/20", "10.64.0.0/21"]
+  source_ranges = [var.iap_source_range, var.east1_internal_range]
 
   allow {
     protocol  = "tcp"
